@@ -1,0 +1,1 @@
+qmake -tp vc DemoPro1.pro

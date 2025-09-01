@@ -1,0 +1,8 @@
+[requires]
+libcurl/7.86.0
+openssl/1.1.1s
+sqlite3/3.32.3
+tinycthreadpool/1.0
+
+[generators]
+cmake
