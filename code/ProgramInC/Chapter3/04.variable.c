@@ -19,10 +19,10 @@ int main() {
 
   printf("address of value: %#x\n", &value);
 
-  // key words ±êÊ¶·û identifier
+  // key words æ ‡è¯†ç¬¦ identifier
   // 1. a-zA-Z0-9_
-  // 2. Êı²»ÄÜÔÚµÚÒ»¸ö
-  // 3*. Google code style, a-z_a-z£¬person_name
+  // 2. æ•°ä¸èƒ½åœ¨ç¬¬ä¸€ä¸ª
+  // 3*. Google code style, a-z_a-zï¼Œperson_name
   float a_float3 = 3.14f;
   float a_float = 3.14f;
   return 0;

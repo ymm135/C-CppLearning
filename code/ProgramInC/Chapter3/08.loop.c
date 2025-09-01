@@ -65,7 +65,7 @@ int main() {
    * }
    *
    *  < C99
-   *  initialization ²»ÄÜÓĞ±äÁ¿¶¨Òå
+   *  initialization ä¸èƒ½æœ‰å˜é‡å®šä¹‰
    */
 
 //  int num = 1;

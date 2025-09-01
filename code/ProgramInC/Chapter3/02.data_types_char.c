@@ -1,22 +1,23 @@
 #include <stdio.h>
 #include <limits.h>
 #include <locale.h>
+#include <wchar.h>
 
 int main() {
-  // ×Ö·û¼¯ ASCII 127
+  // å­—ç¬¦é›† ASCII 127
   char a = 'a'; // 97
   char char_1 = '1';// 49
   char char_0 = '0';// 48
 
   char i = 0; // \0, NULL
 
-  // ×ÖÃæÁ¿ literal
+  // å­—é¢é‡ literal
   // \n : newline
   // \b : backspace
   // \r : return
   // \t : table
-  // \' : ' ×Ö·û×ÖÃæÁ¿
-  // \" : " ×Ö·û´®×ÖÃæÁ¿
+  // \' : ' å­—ç¬¦å­—é¢é‡
+  // \" : " å­—ç¬¦ä¸²å­—é¢é‡
   char char_1_escape_oct = '\61';
   char char_1_escape_hex = '\x31';
   char newline = '\n';
@@ -31,15 +32,15 @@ int main() {
 
   // Unicode  CJK Code point.
   // C95
-  wchar_t zhong = L'ÖĞ';
+  wchar_t zhong = L'ä¸­';
   wchar_t zhong_hex = L'\u4E2D';
-  printf("ÖĞ£º%d\n", zhong);
-  printf("ÖĞ£º%d\n", zhong_hex);
+  printf("ä¸­ï¼š%d\n", zhong);
+  printf("ä¸­ï¼š%d\n", zhong_hex);
 
   setlocale(LC_ALL, "chs");
-  wprintf(L"ÖĞ£º%lc", zhong);
+  wprintf(L"ä¸­ï¼š%lc", zhong);
 
-  // ×Ö·û´®
-  char *string = "ÖĞ";
+  // å­—ç¬¦ä¸²
+  char *string = "ä¸­";
   return 0;
 }
