@@ -1,0 +1,54 @@
+# CMake 构建目录
+cmake-build-*/
+build/
+out/
+
+# CLion IDE 配置文件
+.idea/
+*.iml
+
+# 编译生成的文件
+*.exe
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+
+# CMake 生成的文件
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# 调试文件
+*.pdb
+*.ilk
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 临时文件
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*~
+
+# Visual Studio 相关（如果曾经用过）
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+
+# 编译器生成的依赖文件
+*.d
+*.dep
