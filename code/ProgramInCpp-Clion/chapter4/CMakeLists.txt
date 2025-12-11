@@ -14,6 +14,5 @@ foreach(TEST_SOURCE ${TEST_SOURCES})
     # 创建可执行文件，命名格式: chapter4_文件名
     set(EXECUTABLE_NAME "chapter4_${TEST_NAME}")
     add_executable(${EXECUTABLE_NAME} ${TEST_SOURCE})
-    
     message(STATUS "  添加测试用例: ${EXECUTABLE_NAME}")
 endforeach()
