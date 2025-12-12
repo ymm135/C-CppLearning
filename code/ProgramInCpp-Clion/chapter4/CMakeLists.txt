@@ -14,5 +14,20 @@ foreach(TEST_SOURCE ${TEST_SOURCES})
     # 创建可执行文件，命名格式: chapter4_文件名
     set(EXECUTABLE_NAME "chapter4_${TEST_NAME}")
     add_executable(${EXECUTABLE_NAME} ${TEST_SOURCE})
+    
+    # 为整数溢出示例链接 Boost
+    if(TEST_NAME STREQUAL "4-c_cpp_integer_overflow")
+        if(TARGET Boost::headers)
+            target_link_libraries(${EXECUTABLE_NAME} PRIVATE Boost::headers)
+            # 使用add_definitions确保所有构建类型都有这个定义
+            target_compile_definitions(${EXECUTABLE_NAME} PRIVATE BOOST_FOUND=1)
+            # 添加包含路径
+            target_include_directories(${EXECUTABLE_NAME} PRIVATE ${Boost_INCLUDE_DIRS})
+            message(STATUS "    链接 Boost 到 ${EXECUTABLE_NAME}")
+        else()
+            message(WARNING "    Boost 未找到，${EXECUTABLE_NAME} 将不使用 cpp_int")
+        endif()
+    endif()
+    
     message(STATUS "  添加测试用例: ${EXECUTABLE_NAME}")
 endforeach()
